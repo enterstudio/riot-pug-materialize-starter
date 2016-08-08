@@ -33,7 +33,7 @@
   "dependencies": {
     "npm-run-all": "^1.3.2",
     "riot": "^2.3.11",
-    "riotcontrol": "0.0.1"
+    "riotcontrol": "0.0.3"
   },
   "repository": {
     "type": "git",
