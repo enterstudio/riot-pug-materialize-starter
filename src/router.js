@@ -1,5 +1,5 @@
 import './pages/home.tag'
-import './pages/projects.tag'
+import './pages/projects.pug'
 
 // we need this to easily check the current route from every component
 riot.routeState = {

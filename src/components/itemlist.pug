@@ -1,20 +1,16 @@
-<itemlist>
-  <h3>{ opts.title }</h3>
+itemlist
+  h3 { opts.title }
+    .row
+      .col(class="s4", each='{ items }')
+        .card-panel(class="teal white-text lighten-2 hoverable") { this.name }
 
-  <ul>
-    <li each={ items } >{ this.name }</li>
-  </ul>
-
-  <script>
+  script.
     this.items = [];
-
     this.on('mount', () => {
       riot.control.trigger(riot.EVT.loadItems);
     });
-
     riot.control.on(riot.EVT.loadItemsSuccess, items => {
       this.items = items;
       this.update()
     });
-  </script>
-</itemlist>
+

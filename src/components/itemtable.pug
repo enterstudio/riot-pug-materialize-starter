@@ -1,0 +1,21 @@
+itemtable
+  table
+    thead
+      tr
+        th(each="{ headerItems }") { this.name }
+    tbody
+      tr
+        td(each="{ tableItems }") { this.name }
+
+  script.
+    this.headerItems = ["Col1", "Col2", "Col3"]
+    this.tableItems = [1,2,3];
+    this.on('mount', () => {
+      riot.control.trigger(riot.EVT.loadItems);
+    });
+    riot.control.on(riot.EVT.loadItemsSuccess, items => {
+      this.headerItems = headerItems;
+      this.tableItems = tableItems;
+      this.update()
+    });
+

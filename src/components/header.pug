@@ -1,0 +1,21 @@
+header
+	nav(role="navigation", class="light-blue lighten-1")
+		.nav-wrapper(class="container")
+			a.brand-logo(href="#") Meeeet
+			ul#nav-mobile(class="right hide-on-med-and-down")
+				li(each='{ navItems }', onclick='{ parent.route }') 
+					a(href="") { this.title } &nbsp
+
+	script.
+		this.currentView = riot.routeState.view;
+		this.navItems = [
+		    { title : 'Home', view : 'home'},
+		    { title : 'Projects', view : 'projects' }
+		];
+		this.route = (evt) => {
+		    riot.route(evt.item.view)
+		};
+
+
+
+
