@@ -32,7 +32,7 @@
   "license": "CC-BY-4.0",
   "dependencies": {
     "npm-run-all": "^2.3.0",
-    "riot": "^2.5.0",
+    "riot": "^3.8.0",
     "riotcontrol": "0.0.3"
   },
   "repository": {
